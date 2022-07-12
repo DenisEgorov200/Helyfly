@@ -4,24 +4,41 @@
     // .header__container
     &__container {
         display: flex;
-        justify-content: center;
+        align-items: center;
     }
 
     // .header__logo
 
-    &__logo {}
+    &__logo {
+        margin: 0 36px 0 0;
+        img {
+            max-width: 100%;
+        }
+    }
 
     // .header__contact
 
     &__contact {
         display: flex;
+        align-items: center;
     }
 
     // .header__telephone
 
-    &__telephone {}
+    &__telephone {
+        font-size: 14px;
+        line-height: 17px;
+        color: $secondary;
+    }
 
     // .header__num
 
-    &__num {}
+    &__num {
+        text-decoration: none;
+        color: $primary;
+        transition: color .3s linear;
+        &:hover {
+            color: lighten($color: $primary, $amount: 50)
+        }
+    }
 }

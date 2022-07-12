@@ -1,12 +1,12 @@
 .btn {
     display: inline-block;
     vertical-align: top;
-    padding: 1.12em 2.1em;
+    padding: 24px 37px;
 
-    background: $secondary;
-    border: none;
+    background: transparent;
+    border: 3px solid $white;
     cursor: pointer;
-    border-radius: 3em;
+    border-radius: 3px;
 
     font-family: inherit;
     font-size: 1.2rem;
@@ -15,14 +15,13 @@
     color: $white;
     text-decoration: none;
 
-    transition: background-color .2s linear;
+    transition: background-color .3s linear;
 
-    &--red {
-        background-color: $red;
-        box-shadow: 0 7px 17px -10px rgba($red, .3);
+    &--white {
+        background-color: transparent;
 
         &:hover {
-            background-color: darken($red, 5%);
+            background-color: darken($primary, 5%);
         }
     }
 

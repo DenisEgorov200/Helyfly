@@ -8,7 +8,8 @@ html {
 body {
     background-color: $white;
 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: $MainFont;
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.5;
     color: $primary;
@@ -22,12 +23,10 @@ body {
 
 
 /* Blocks */
-@import "blocks/page";
 @import "blocks/header";
-@import "blocks/main";
 @import "blocks/container";
 @import "blocks/btn";
-
+@import "blocks/intro";
 
 
 
