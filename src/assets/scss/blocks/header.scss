@@ -1,0 +1,27 @@
+.header {
+    padding: 38px 0;
+
+    // .header__container
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .header__logo
+
+    &__logo {}
+
+    // .header__contact
+
+    &__contact {
+        display: flex;
+    }
+
+    // .header__telephone
+
+    &__telephone {}
+
+    // .header__num
+
+    &__num {}
+}
