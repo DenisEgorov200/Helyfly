@@ -1,0 +1,147 @@
+.photoshoot {
+    padding: 0 70px 0 30px;
+
+    // .photoshoot__container
+
+    &__container {
+        display: flex;
+    }
+
+    // .photoshoot__left
+
+    &__left {
+        width: 50%;
+    }
+
+    // .photoshoot__header
+
+    &__header {
+        margin: 0 0 10px 0;
+    }
+
+    // .photoshoot__title
+
+    &__title {
+        max-width: 260px;
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 49px;
+        color: $primary;
+    }
+
+    // .photoshoot__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 40px 0;
+    }
+
+    // .photoshoot__subtitle
+
+    &__subtitle {
+        max-width: 500px;
+        font-family: $MainFont;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+        margin: 0 0 20px 0;
+    }
+
+    // .photoshoot__info
+
+    &__info {}
+
+    // .photoshoot__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    // .photoshoot__icon
+
+    &__icon {
+        margin: 0 10px 0 0;
+    }
+
+    // .photoshoot__text
+
+    &__text {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 14px;
+        color: $primary;
+    }
+
+    // .photoshoot__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-top: 0.5px solid $gray;
+        border-bottom: 0.5px solid $gray;
+    }
+
+    // .photoshoot__review
+
+    &__review {}
+
+    // .photoshoot__grade
+
+    &__grade {}
+
+    // .photoshoot__right
+
+    &__right {
+        width: 50%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+.rating-area {
+	overflow: hidden;
+	width: 118px;
+	margin: 0 auto;
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 20px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 25px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: $yellow;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: $yellow;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: $yellow;
+}
+.rate-area > label:active {
+	position: relative;
+}

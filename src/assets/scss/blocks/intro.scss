@@ -28,12 +28,15 @@
 
     // .intro__body
 
-    &__body {}
+    &__body {
+        margin: 0 0 12px 0;
+    }
 
     // .intro__price
 
     &__price {
         position: relative;
+        z-index: 1;
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -44,6 +47,19 @@
         border-radius: 5px;
 
         margin: 0 0 12px 0;
+
+        &::after {
+            position: absolute;
+            z-index: 2;
+            content: '';
+            bottom: -8px;
+            right: 35%;
+            width: 20px;
+            height: 20px;
+            background: $yellow;
+            border-radius: 5px;
+            transform: rotate(45deg);
+        }
     }
 
     // .intro__value
@@ -64,12 +80,16 @@
     // .intro__triangle
 
     &__triangle {
-        position: absolute;
+
     }
 
     // .intro__percent
 
-    &__percent {}
+    &__percent {
+        img {
+            max-width: 100%;
+        }
+    }
 
     // .intro__footer
 
