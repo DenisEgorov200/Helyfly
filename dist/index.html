@@ -14,12 +14,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     
-    <title>HELYFLY</title>
-</head>
+    <title>HELYFLY</title></head>
 <body>
-
     <!-- Header -->
     <header class="header">
         <div class="header__container container">
@@ -105,24 +104,88 @@
                     <p class="photoshoot__review">
                         Более <span>50</span> отзывов с оценкой 
                     </p>
-                    <div class="photoshoot__grade">
-                        <div class="rating-area">
-                            <input type="radio" id="star-5" name="rating" value="5">
-                            <label for="star-5" title="Оценка «5»"></label>	
-                            <input type="radio" id="star-4" name="rating" value="4">
-                            <label for="star-4" title="Оценка «4»"></label>    
-                            <input type="radio" id="star-3" name="rating" value="3">
-                            <label for="star-3" title="Оценка «3»"></label>  
-                            <input type="radio" id="star-2" name="rating" value="2">
-                            <label for="star-2" title="Оценка «2»"></label>    
-                            <input type="radio" id="star-1" name="rating" value="1">
-                            <label for="star-1" title="Оценка «1»"></label>
-                        </div>
+                    <div class="photoshoot__rating simple-rating">
+                       <div class="simple-rating__items">
+                            <input id="simple-rating__5" type="radio" class="simple-rating__item" checked name="simple-rating" value="5">
+                            <label for="simple-rating__5" class="simple-rating__label"></label>
+                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating" value="4">
+                            <label for="simple-rating__4" class="simple-rating__label"></label>
+                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating" value="3">
+                            <label for="simple-rating__3" class="simple-rating__label"></label>
+                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating" value="2">
+                            <label for="simple-rating__2" class="simple-rating__label"></label>
+                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating" value="1">
+                            <label for="simple-rating__1" class="simple-rating__label"></label>
+                       </div>
                     </div>
                 </div>
             </div>
             <div class="photoshoot__right">
                 <img src="./assets/images/photoshoot-preview.jpg" alt="preview">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Photo -->
+    <section class="photo">
+        <div class="photo__container container">
+            <h3 class="photo__title">Фотографии пакета:</h3>
+            <div class="photo__gallery gallery">
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="gallery__item">
+                    <img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+            </div>
+            <div class="photo__all">
+                <button class="photo__more btn btn--show">
+                    <img src="./assets/images/icon/arrow.svg" alt="arrow">
+                    <p>Показать все фото</p>
+                    <img src="./assets/images/icon/arrow.svg" alt="arrow">
+                </button>
             </div>
         </div>
     </section>
@@ -132,5 +195,6 @@
 
     <!-- JS -->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/show-more.js"></script>
 </body>
 </html>

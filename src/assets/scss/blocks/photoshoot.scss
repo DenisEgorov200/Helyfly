@@ -1,5 +1,5 @@
 .photoshoot {
-    padding: 0 70px 0 30px;
+    padding: 10px 0;
 
     // .photoshoot__container
 
@@ -59,6 +59,7 @@
     &__row {
         display: flex;
         align-items: center;
+
         &:not(:last-child) {
             margin: 0 0 10px 0;
         }
@@ -67,7 +68,15 @@
     // .photoshoot__icon
 
     &__icon {
+        display: flex;
+        align-items: center;
+        width: 31px;
+        height: 31px;
         margin: 0 10px 0 0;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     // .photoshoot__text
@@ -91,57 +100,94 @@
 
     // .photoshoot__review
 
-    &__review {}
+    &__review {
+        font-family: $MainFont;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+        margin: 0 14px 0 0;
 
-    // .photoshoot__grade
+        span {
+            font-weight: 600;
+        }
+    }
 
-    &__grade {}
+    // .photoshoot__rating
+
+    &__rating {}
 
     // .photoshoot__right
 
     &__right {
         width: 50%;
+
         img {
+            width: 100%;
             max-width: 100%;
         }
     }
 }
 
-.rating-area {
-	overflow: hidden;
-	width: 118px;
-	margin: 0 auto;
-}
-.rating-area:not(:checked) > input {
-	display: none;
-}
-.rating-area:not(:checked) > label {
-	float: right;
-	width: 20px;
-	padding: 0;
-	cursor: pointer;
-	font-size: 25px;
-	line-height: 32px;
-	color: lightgrey;
-	text-shadow: 1px 1px #bbb;
-}
-.rating-area:not(:checked) > label:before {
-	content: '★';
-}
-.rating-area > input:checked ~ label {
-	color: $yellow;
-}
-.rating-area:not(:checked) > label:hover,
-.rating-area:not(:checked) > label:hover ~ label {
-	color: $yellow;
-}
-.rating-area > input:checked + label:hover,
-.rating-area > input:checked + label:hover ~ label,
-.rating-area > input:checked ~ label:hover,
-.rating-area > input:checked ~ label:hover ~ label,
-.rating-area > label:hover ~ input:checked ~ label {
-	color: $yellow;
-}
-.rate-area > label:active {
-	position: relative;
+// Simple rating
+
+.simple-rating {
+    position: relative;
+    font-size: 25px;
+    display: inline-block;
+
+    &::before {
+        content: "★★★★★";
+        display: block;
+    }
+
+    // .simple-rating__items
+
+    &__items {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+    }
+
+    // .simple-rating__item
+
+    &__item {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        left: 0;
+        top: 0;
+
+        &:checked,
+        &:checked~.simple-rating__label {
+            color: $yellow;
+        }
+    }
+
+    // .simple-rating__label
+
+    &__label {
+        flex: 0 0 20%;
+        height: 100%;
+        cursor: pointer;
+        color: darken($color: $yellow, $amount: 20);
+
+        &::before {
+            content: "★";
+            display: block;
+            transition: color .3s ease 0s;
+        }
+
+        &:hover,
+        &:hover~&,
+        &:checked~&:hover {
+            color: $yellow;
+        }
+    }
 }
