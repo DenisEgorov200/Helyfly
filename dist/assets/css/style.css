@@ -464,18 +464,38 @@ body {
 }
 
 .btn--show {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
+    padding: 0;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 25px;
     color: #5286EC;
+}
+
+.btn--show__16px {
+    font-size: 16px;
+}
+
+.btn--show__14px {
+    font-size: 14px;
+}
+
+.btn--yellow {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FC9B09;
+    border: 2px solid #FC9B09;
+    border-radius: 3px;
+    padding: 16px 32px;
+    transition: all .3s linear;
+}
+
+.btn--yellow:hover {
+    color: #fff;
+    background-color: #FC9B09;
 }
 
 .intro {
@@ -743,10 +763,6 @@ body {
     padding: 30px 0;
 }
 
-.photo__container {
-    border-bottom: 0.5px solid #C7C7C7;
-}
-
 .photo__title {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -756,6 +772,10 @@ body {
     margin: 0 0 37px 0;
 }
 
+.photo__gallery {
+    margin: 0 0 45px 0;
+}
+
 .photo__all {
     display: -ms-flexbox;
     display: flex;
@@ -763,39 +783,314 @@ body {
     justify-content: center;
 }
 
+.photo__more {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 .photo__more p {
     margin: 0 10px;
 }
 
-.gallery__row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+.photo__more img {
+    max-width: 100%;
 }
 
-.gallery__row:not(:last-child) {
-    margin: 0 0 10px 0;
-}
-
-.gallery__row:nth-child(n + 3) {
-    display: none;
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
 
 .gallery__item {
-    width: 25%;
+    width: 100%;
 }
 
 .gallery__item img {
     max-width: 100%;
+    transition: -webkit-transform .1s ease-out;
+    transition: transform .1s ease-out;
+    transition: transform .1s ease-out, -webkit-transform .1s ease-out;
 }
 
-.gallery__item:not(:last-child) {
-    margin: 0 12px 0 0;
+.gallery__item img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.gallery__item:nth-child(n + 9) {
+    display: none;
 }
 
 .gallery__item.is-visible {
     display: block;
+}
+
+.gallery__item.unvisible {
+    display: none;
+}
+
+.organizer__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 27px 0 51px 0;
+    border-bottom: 0.5px solid #C7C7C7;
+    border-top: 0.5px solid #C7C7C7;
+}
+
+.organizer__left {
+    width: 50%;
+}
+
+.organizer__info:not(:last-child) {
+    margin: 0 0 40px 0;
+}
+
+.organizer__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
+    margin: 0 0 14px 0;
+}
+
+.organizer__content {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #37373F;
+    margin: 0 0 5px 0;
+}
+
+.organizer__content span {
+    font-weight: 500;
+}
+
+.organizer__content p:not(:first-child) {
+    margin: 20px 0 0 0;
+}
+
+.organizer__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.organizer__more {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.organizer__more p {
+    margin: 0 10px 0 0;
+}
+
+.organizer__more img {
+    max-width: 100%;
+}
+
+.organizer__right {
+    width: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.organizer__card {
+    position: relative;
+    padding: 30px 0 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+}
+
+.organizer__avatar {
+    width: 139px;
+    height: 139px;
+    background: url("./../images/avatar.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.organizer__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
+    margin: 0 0 7px 0;
+}
+
+.organizer__profession {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #37373F;
+    margin: 0 0 4px 0;
+}
+
+.organizer__show {
+    max-width: 250px;
+    line-height: 21px;
+}
+
+.organizer__heart {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.organizer__heart svg {
+    width: 25px;
+    height: 22px;
+    fill: #FC9B09;
+    transition: fill .3s linear;
+}
+
+.organizer__heart svg:hover {
+    fill: #cf7e03;
+}
+
+.timetable {
+    padding: 60px 0;
+}
+
+.timetable__title {
+    max-width: 212px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #37373F;
+    margin: 0 0 30px 0;
+}
+
+.timetable__card {
+    width: 70%;
+    border: 1px solid #C7C7C7;
+}
+
+.timetable__header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 0.5px solid #C7C7C7;
+}
+
+.timetable__header p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
+    margin: 0 14px 0 0;
+}
+
+.timetable__calendar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 3px;
+    transition: border-color .3s linear;
+}
+
+.timetable__calendar svg {
+    width: 18px;
+    height: 18px;
+    fill: #83888A;
+    transition: fill .3s linear;
+}
+
+.timetable__calendar:hover {
+    border-color: #000;
+}
+
+.timetable__calendar:hover svg {
+    fill: #000;
+}
+
+.timetable__body {
+    margin: 0 0 40px 0;
+}
+
+.timetable__row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.timetable__row:not(:last-child) {
+    border-bottom: 0.5px solid #C4C4C4;
+}
+
+.timetable__column {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
+}
+
+.timetable__price {
+    font-weight: 600;
+}
+
+.timetable__footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 30px 40px 30px;
+}
+
+.timetable__icon {
+    margin: 0 10px 0 0;
+}
+
+.timetable__icon img {
+    max-width: 100%;
+}
+
+.timetable__review {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: #37373F;
+    margin: 0 10px 0 0;
+}
+
+.timetable__review span {
+    font-weight: 600;
 }

@@ -1,0 +1,158 @@
+.timetable {
+    padding: 60px 0;
+
+    // .timetable__container
+
+    &__container {
+    }
+
+    // .timetable__title
+
+    &__title {
+        max-width: 212px;
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: $primary;
+        margin: 0 0 30px 0;
+    }
+
+    // .timetable__card
+
+    &__card {
+        width: 70%;
+        border: 1px solid $gray;
+    }
+
+    // .timetable__header
+
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        border-bottom: 0.5px solid $gray;
+        p {
+            font-family: $MainFont;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: $primary;
+            margin: 0 14px 0 0;
+        }
+    }
+
+    // .timetable__calendar
+
+    &__calendar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: 0.5px solid #C4C4C4;
+        border-radius: 3px;
+        transition: border-color .3s linear;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: #83888A;
+            transition: fill .3s linear;
+        }
+
+        &:hover {
+            border-color: $black;
+            svg {
+                fill: $black;
+            }
+        }
+    }
+
+    // .timetable__body
+
+    &__body {
+        margin: 0 0 40px 0;
+    }
+
+    // .timetable__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 30px;
+
+        &:not(:last-child) {
+            border-bottom: 0.5px solid #C4C4C4;;
+        }
+    }
+
+    // .timetable__column
+
+    &__column {
+        font-family: $MainFont;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+    }
+
+    // .timetable__time
+
+    &__time {
+    }
+
+    // .timetable__price
+
+    &__price {
+        font-weight: 600;
+    }
+
+    // .timetable__left
+
+    &__left {
+    }
+
+    // .timetable__btn
+
+    &__btn {
+    }
+
+    // .timetable__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        padding: 0 30px 40px 30px;
+    }
+
+    // .timetable__icon
+
+    &__icon {
+        margin: 0 10px 0 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .timetable__review
+
+    &__review {
+        font-family: $MainFont;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+        margin: 0 10px 0 0;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    // .timetable__rating
+
+    &__rating {
+    }
+}

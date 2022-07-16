@@ -1,0 +1,160 @@
+.organizer {
+
+    // .organizer__container
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 27px 0 51px 0;
+        border-bottom: 0.5px solid $gray;
+        border-top: 0.5px solid $gray;
+    }
+
+    // .organizer__left
+
+    &__left {
+        width: 50%;
+    }
+
+    // .organizer__info
+
+    &__info {
+        &:not(:last-child) {
+            margin: 0 0 40px 0;
+        }
+    }
+
+    // .organizer__title
+
+    &__title {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+        margin: 0 0 14px 0;
+    }
+
+    // .organizer__content
+
+    &__content {
+        font-family: $MainFont;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary;
+        margin: 0 0 5px 0;
+
+        span {
+            font-weight: 500;
+        }
+
+        p {
+            &:not(:first-child) {
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+
+    // .organizer__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+    }
+
+    // .organizer__more
+
+    &__more {
+        display: flex;
+        align-items: center;
+        
+        p {
+            margin: 0 10px 0 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .organizer__right
+
+    &__right {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    // .organizer__card
+
+    &__card {
+        position: relative;
+        padding: 30px 0 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    // .organizer__avatar
+
+    &__avatar {
+        width: 139px;
+        height: 139px;
+        background: url('./../images/avatar.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 0 15px 0;
+    }
+
+    // .organizer__name
+
+    &__name {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: $primary;
+        margin: 0 0 7px 0;
+    }
+
+    // .organizer__profession
+
+    &__profession {
+        font-family: $MainFont;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: $primary;
+        margin: 0 0 4px 0;
+    }
+
+    // .organizer__show
+
+    &__show {
+        max-width: 250px;
+        line-height: 21px;
+    }
+
+    // .organizer__heart
+
+    &__heart {
+        position: absolute;
+        right: 0;
+        top: 0;
+        
+        svg {
+            width: 25px;
+            height: 22px;
+            fill: $yellow;
+            transition: fill .3s linear;
+
+            &:hover {
+                fill: darken($color: $yellow, $amount: 10)
+            }
+        }
+    }
+}

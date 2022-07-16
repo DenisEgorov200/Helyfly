@@ -1,0 +1,87 @@
+.map {
+    position: relative;
+
+    // .map__card
+
+    &__card {
+        position: absolute;
+        left: 390px;
+        top: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 420px;
+        height: 469px;
+        background-color: $white;
+        border: 1px solid $gray;
+        padding: 30px 50px;
+    }
+
+    // .map__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    // .map__icon
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 61px;
+        height: 61px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 18px 0 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // .map__text
+
+    &__text {
+    }
+
+    // .map__title
+
+    &__title {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: $primary;
+    }
+
+    // .map__subtitle
+
+    &__subtitle {
+        font-family: $MainFont;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: $primary;
+    }
+
+    // .map__profession
+
+    &__profession {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    // .map__more
+
+    &__more {
+    }
+}

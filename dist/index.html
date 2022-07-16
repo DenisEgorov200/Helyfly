@@ -17,8 +17,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=<29a7223d-85c7-40b4-8682-1e3ab792be03>&lang=ru_RU" type="text/javascript">
+        </script>
+    
+    
     <title>HELYFLY</title></head>
 <body>
+    <!-- Svg -->
+    <svg style="display: none;">
+        <symbol id="heart" viewBox="0 0 45.743 45.743">
+                <g>
+                      <path  d="M34.199,3.83c-3.944,0-7.428,1.98-9.51,4.997c0,0-0.703,1.052-1.818,1.052c-1.114,0-1.817-1.052-1.817-1.052
+                      c-2.083-3.017-5.565-4.997-9.51-4.997C5.168,3.83,0,8.998,0,15.376c0,1.506,0.296,2.939,0.82,4.258
+                      c3.234,10.042,17.698,21.848,22.051,22.279c4.354-0.431,18.816-12.237,22.052-22.279c0.524-1.318,0.82-2.752,0.82-4.258
+                      C45.743,8.998,40.575,3.83,34.199,3.83z"/>
+                </g>
+        </symbol>            
+     </svg>
+     <svg style="display: none;">
+          <symbol id="calendar" viewBox="0 0 289.48 289.48">
+    		<g>
+    			<path d="M273.74,21.48h-32.52V5c0-2.761-2.239-5-5-5h-42.96c-2.761,0-5,2.239-5,5v16.48h-87.04V5c0-2.761-2.239-5-5-5H53.26
+    				c-2.761,0-5,2.239-5,5v16.48H15.74c-8.271,0-15,6.729-15,15v57v181c0,8.271,6.729,15,15,15h258c8.271,0,15-6.729,15-15v-181v-57
+    				C288.74,28.209,282.011,21.48,273.74,21.48z M198.26,26.48V10h32.96v16.48v16.48h-32.96V26.48z M58.26,26.48V10h32.96v16.48
+    				v16.48H58.26V26.48z M278.74,274.48c0,2.757-2.243,5-5,5h-258c-2.757,0-5-2.243-5-5v-176h268V274.48z M278.74,88.48h-268v-52
+    				c0-2.757,2.243-5,5-5h32.52v16.48c0,2.761,2.239,5,5,5h42.96c2.761,0,5-2.239,5-5V31.48h87.04v16.48c0,2.761,2.239,5,5,5h42.96
+    				c2.761,0,5-2.239,5-5V31.48h32.52c2.757,0,5,2.243,5,5V88.48z"/>
+    			<path d="M39.031,174.689h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5H39.031c-2.761,0-5,2.239-5,5v28.418
+    				C34.031,172.45,36.27,174.689,39.031,174.689z"/>
+    			<path d="M100.031,174.689h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C95.031,172.45,97.27,174.689,100.031,174.689z"/>
+    			<path d="M161.031,174.689h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C156.031,172.45,158.27,174.689,161.031,174.689z"/>
+    			<path d="M222.031,174.689h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C217.031,172.45,219.27,174.689,222.031,174.689z"/>
+    			<path d="M39.031,235.356h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5H39.031c-2.761,0-5,2.239-5,5v28.418
+    				C34.031,233.117,36.27,235.356,39.031,235.356z"/>
+    			<path d="M100.031,235.356h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C95.031,233.117,97.27,235.356,100.031,235.356z"/>
+    			<path d="M161.031,235.356h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C156.031,233.117,158.27,235.356,161.031,235.356z"/>
+    			<path d="M222.031,235.356h28.418c2.761,0,5-2.239,5-5v-28.418c0-2.761-2.239-5-5-5h-28.418c-2.761,0-5,2.239-5,5v28.418
+    				C217.031,233.117,219.27,235.356,222.031,235.356z"/>
+    		</g>
+          </symbol>            
+       </svg>
     <!-- Header -->
     <header class="header">
         <div class="header__container container">
@@ -68,7 +111,8 @@
                 </div>
                 <div class="photoshoot__body">
                     <p class="photoshoot__subtitle">
-                        Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
+                        Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф
+                        запечатлит лучшие моменты
                     </p>
                     <div class="photoshoot__info">
                         <div class="photoshoot__row">
@@ -102,21 +146,26 @@
                         <img src="./assets/images/icon/cup.svg" alt="cup">
                     </div>
                     <p class="photoshoot__review">
-                        Более <span>50</span> отзывов с оценкой 
+                        Более <span>50</span> отзывов с оценкой
                     </p>
                     <div class="photoshoot__rating simple-rating">
-                       <div class="simple-rating__items">
-                            <input id="simple-rating__5" type="radio" class="simple-rating__item" checked name="simple-rating" value="5">
+                        <div class="simple-rating__items">
+                            <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                name="simple-rating" value="5">
                             <label for="simple-rating__5" class="simple-rating__label"></label>
-                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating" value="4">
+                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="4">
                             <label for="simple-rating__4" class="simple-rating__label"></label>
-                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating" value="3">
+                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="3">
                             <label for="simple-rating__3" class="simple-rating__label"></label>
-                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating" value="2">
+                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="2">
                             <label for="simple-rating__2" class="simple-rating__label"></label>
-                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating" value="1">
+                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="1">
                             <label for="simple-rating__1" class="simple-rating__label"></label>
-                       </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,12 +238,330 @@
             </div>
         </div>
     </section>
+    
+    <!-- Organizer -->
+    <section class="organizer">
+        <div class="organizer__container container">
+            <div class="organizer__left">
+                <div class="organizer__info">
+                    <h3 class="organizer__title">Об организаторе:</h3>
+                    <div class="organizer__content">
+                        <p>
+                            Всем привет! Я фотограф Мария! И по мимо фотосъемки я так же являюсь
+                            членом группы экспертов туристической отрасли, которые хорошо разбираются в маркетинге,
+                            операциях и
+                            услугах обслуживания клиентов, специализирующихся на совместном использовании и частных турах.
+                        </p>
+                        <p>
+                            Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение,
+                            которое соответствует бюджету
+                            и планам клиента. Мы никогда не зависим от субпоставщиков
+                            и не свяжемся…
+                        </p>
+                    </div>
+                    <div class="organizer__footer">
+                        <button class="organizer__more btn btn--show btn--show__16px">
+                            <p>Читать еще</p>
+                            <img src="./assets/images/icon/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+                <div class="organizer__info">
+                    <h3 class="organizer__title">
+                        Что я предоставлю:
+                    </h3>
+                    <p class="organizer__content">Встречу вас на машине после длительного перелёта.
+                        Качественный подбор места и локации для вашей съемки. При необходимости всегда возможно прерваться
+                        на обед/ужин. Более <span>50</span> фотографий на выходе с обработкой и замечательные впечатления о
+                        Дубае !</p>
+                    <div class="organizer__footer">
+                        <button class="organizer__more btn btn--show btn--show__16px">
+                            <p>Читать еще</p>
+                            <img src="./assets/images/icon/arrow.svg" alt="arrow">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="organizer__right">
+                <div class="organizer__card">
+                    <div class="organizer__avatar">
+                    </div>
+                    <h3 class="organizer__name">Марина Иванова</h3>
+                    <span class="organizer__profession">Фотограф</span>
+                    <a href="#" class="organizer__show btn btn--show btn--show__16px">Показать больше информации о
+                        фотографе</a>
+                    <div class="organizer__heart">
+                        <svg>
+                            <use xlink:href="#heart" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Timetable -->
+    <section class="timetable">
+        <div class="timetable__container container">
+            <h3 class="timetable__title">Доступная съемка в ближайшее время:
+            </h3>
+            <div class="timetable__card">
+                <div class="timetable__header">
+                    <p>Пятница, 14 сентября</p>
+                    <div class="timetable__calendar">
+                        <svg>
+                            <use xlink:href="#calendar" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="timetable__body">
+                    <div class="timetable__row">
+                        <div class="timetable__column">
+                            <div class="timetable__time">15:00 - 18:00</div>
+                            <div class="timetable__price">1500₽</div>
+                            <div class="timetable__left">Осталось — 1 место</div>
+                        </div>
+                        <div class="timetable__column">
+                            <button class="timetable__btn btn btn--yellow">Выбрать</button>
+                        </div>
+                    </div>
+                    <div class="timetable__row">
+                        <div class="timetable__column">
+                            <div class="timetable__time">19:00 - 22:00</div>
+                            <div class="timetable__price">1500₽</div>
+                            <div class="timetable__left">Осталось — 1 место</div>
+                        </div>
+                        <div class="timetable__column">
+                            <button class="timetable__btn btn btn--yellow">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="timetable__footer">
+                    <div class="timetable__icon">
+                        <img src="./assets/images/icon/cup.svg" alt="cup">
+                    </div>
+                    <p class="timetable__review">
+                        Более <span>50</span> отзывов с оценкой
+                    </p>
+                    <div class="timetable__rating simple-rating">
+                        <div class="simple-rating__items">
+                            <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                name="simple-rating" value="5">
+                            <label for="simple-rating__5" class="simple-rating__label"></label>
+                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="4">
+                            <label for="simple-rating__4" class="simple-rating__label"></label>
+                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="3">
+                            <label for="simple-rating__3" class="simple-rating__label"></label>
+                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="2">
+                            <label for="simple-rating__2" class="simple-rating__label"></label>
+                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="1">
+                            <label for="simple-rating__1" class="simple-rating__label"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map -->
+    <section class="map">
+        <div id="map" style="width: 100%; height: 509px">
+            <div class="map__card">
+                <div class="map__row">
+                    <div class="map__icon">
+                        <img src="./assets/images/icon/1.svg" alt="1">
+                    </div>
+                    <div class="map__text">
+                        <h4 class="map__title">Где встречаемся?</h4>
+                        <p class="map__subtitle">Москва</p>
+                    </div>
+                </div>
+                <div class="map__row">
+                    <div class="map__icon">
+                        <img src="./assets/images/icon/2.svg" alt="2">
+                    </div>
+                    <div class="map__text">
+                        <h4 class="map__title">Время съемки?</h4>
+                        <p class="map__subtitle">3 часа</p>
+                    </div>
+                </div>
+                <div class="map__row">
+                    <div class="map__icon">
+                        <img src="./assets/images/icon/3.svg" alt="3">
+                    </div>
+                    <div class="map__text">
+                        <h4 class="map__title">Мест осталось:</>
+                            <p class="map__subtitle">2 места</p>
+                    </div>
+                </div>
+                <div class="map__row">
+                    <div class="map__icon">
+                        <img src="./assets/images/avatar.jpg" alt="avatar">
+                    </div>
+                    <div class="map__text">
+                        <h4 class="map__title">Мария Иванова</h4>
+                        <p class="map__profession">Фотограф</p>
+                        <a href="#" class="map__more btn btn--show btn--show__14px">Показать больше информации</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="reviews__container container">
+            <h4 class="reviews__title">Отзывы:</h4>
+            <div class="reviews__card">
+                <div class="reviews__left">
+                    <div class="reviews__img">
+                        <img src="./assets/images/reviews-1.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="reviews__right">
+                    <div class="reviews__header">
+                        <div class="reviews__name">Валерия Антонова</div>
+                        <div class="reviews__profession">Арт-директор</div>
+                        <div class="reviews__mini">
+                            <div class="reviews__grade simple-rating">
+                                <div class="simple-rating__items">
+                                    <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                        name="simple-rating" value="5">
+                                    <label for="simple-rating__5" class="simple-rating__label"></label>
+                                    <input id="simple-rating__4" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="4">
+                                    <label for="simple-rating__4" class="simple-rating__label"></label>
+                                    <input id="simple-rating__3" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="3">
+                                    <label for="simple-rating__3" class="simple-rating__label"></label>
+                                    <input id="simple-rating__2" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="2">
+                                    <label for="simple-rating__2" class="simple-rating__label"></label>
+                                    <input id="simple-rating__1" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="1">
+                                    <label for="simple-rating__1" class="simple-rating__label"></label>
+                                </div>
+                            </div>
+                            <div class="reviews__icon">
+                                <img src="./assets/images/icon/check-mark.svg" alt="check mark">
+                            </div>
+                            <div class="reviews__text">Супер! Я бы заказала съемку снова!</div>
+                        </div>
+                    </div>
+                    <div class="reviews__body">
+                        <p>Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто
+                            замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
+                    </div>
+                    <div class="reviews__footer">
+                        <p>19 Апреля, 2019г.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__card">
+                <div class="reviews__left">
+                    <div class="reviews__img">
+                        <img src="./assets/images/reviews-2.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="reviews__right">
+                    <div class="reviews__header">
+                        <div class="reviews__name">Виталий Петров</div>
+                        <div class="reviews__profession">Фотограф</div>
+                        <div class="reviews__mini">
+                            <div class="reviews__grade simple-rating">
+                                <div class="simple-rating__items">
+                                    <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                        name="simple-rating" value="5">
+                                    <label for="simple-rating__5" class="simple-rating__label"></label>
+                                    <input id="simple-rating__4" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="4">
+                                    <label for="simple-rating__4" class="simple-rating__label"></label>
+                                    <input id="simple-rating__3" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="3">
+                                    <label for="simple-rating__3" class="simple-rating__label"></label>
+                                    <input id="simple-rating__2" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="2">
+                                    <label for="simple-rating__2" class="simple-rating__label"></label>
+                                    <input id="simple-rating__1" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="1">
+                                    <label for="simple-rating__1" class="simple-rating__label"></label>
+                                </div>
+                            </div>
+                            <div class="reviews__icon">
+                                <img src="./assets/images/icon/check-mark.svg" alt="check mark">
+                            </div>
+                            <div class="reviews__text">Супер! Я бы заказала съемку снова!</div>
+                        </div>
+                    </div>
+                    <div class="reviews__body">
+                        <p>Восторг! :) Очень понравилось :) Захватили последний теплый, солнечный октябрьский день :)
+                            Впечатлило всё: сам вертолет, взлет, полёт, приземление.
+                            Организация полёта отличная. Спасибо!</p>
+                    </div>
+                    <div class="reviews__footer">
+                        <p>27 Апреля, 2019г.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews__card">
+                <div class="reviews__left">
+                    <div class="reviews__img">
+                        <img src="./assets/images/reviews-3.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="reviews__right">
+                    <div class="reviews__header">
+                        <div class="reviews__name">Джим Керри</div>
+                        <div class="reviews__mini">
+                            <div class="reviews__grade simple-rating">
+                                <div class="simple-rating__items">
+                                    <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                        name="simple-rating" value="5">
+                                    <label for="simple-rating__5" class="simple-rating__label"></label>
+                                    <input id="simple-rating__4" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="4">
+                                    <label for="simple-rating__4" class="simple-rating__label"></label>
+                                    <input id="simple-rating__3" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="3">
+                                    <label for="simple-rating__3" class="simple-rating__label"></label>
+                                    <input id="simple-rating__2" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="2">
+                                    <label for="simple-rating__2" class="simple-rating__label"></label>
+                                    <input id="simple-rating__1" type="radio" class="simple-rating__item"
+                                        name="simple-rating" value="1">
+                                    <label for="simple-rating__1" class="simple-rating__label"></label>
+                                </div>
+                            </div>
+                            <div class="reviews__icon">
+                                <img src="./assets/images/icon/check-mark.svg" alt="check mark">
+                            </div>
+                            <div class="reviews__text">Супер! Я бы заказала съемку снова!</div>
+                        </div>
+                    </div>
+                    <div class="reviews__body">
+                        <p>Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и
+                            сытными))Мы
+                            с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам
+                            всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но
+                            все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
+                    </div>
+                    <div class="reviews__footer">
+                        <p>11 Апреля, 2019г.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
 
     <!-- JS -->
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/show-more.js"></script>
+
 </body>
 </html>

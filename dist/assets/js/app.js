@@ -104,18 +104,29 @@ eval("console.log('file 1');\r\n\n\n//# sourceURL=webpack:///./src/assets/js/app
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const showMore = document.querySelector('.photo__more');\r\nconst photoLength = document.querySelectorAll('.gallery__item').length;\r\nlet items = 8;\r\n\r\nshowMore.addEventListener('click', function() {\r\n    items += 4;\r\n    const array = Array.from(document.querySelector('.gallery').children);\r\n    const visItems = array.slice(0, items);\r\n\r\n    visItems.forEach(el => el.classList.add('is-visible'));\r\n\r\n    if (visItems.length === photoLength) {\r\n        visItems = slice(0,-4)\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/show-more.js?");
+eval("// const showMore = document.querySelector('.photo__more');\r\n// const photoLength = document.querySelectorAll('.gallery__item').length;\r\n// let items = 8;\r\n\r\n// showMore.addEventListener('click', function() {\r\n//     items += 4;\r\n//     const array = Array.from(document.querySelector('.gallery').children);\r\n//     const visItems = array.slice(0, items);\r\n\r\n//     visItems.forEach(el => el.classList.add('is-visible'));\r\n\r\n//     if (visItems.length === photoLength) {\r\n//         visItems.forEach(el => el.classList.remove('is-visible'));\r\n//     }\r\n// });\r\n\r\nconst showMore = document.querySelector('.photo__more');\r\nconst photoLength = document.querySelectorAll('.gallery__item');\r\nconst arrowImg = document.querySelectorAll('.photo__img')\r\nconsole.log(arrowImg);\r\nlet items = 8;\r\n\r\nshowMore.addEventListener('click', function() {\r\n    for (let i = items; i < items + 4; i++) {\r\n        if (photoLength[i]) {\r\n            photoLength[i].style.display = 'block';\r\n        }\r\n    }\r\n    items += 4;\r\n    if (items === photoLength.length) {\r\n        // event.target.style.display = 'none'\r\n        showMore.style.display = 'none'\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/show-more.js?");
+
+/***/ }),
+
+/***/ "./src/assets/js/yandex-map.js":
+/*!*************************************!*\
+  !*** ./src/assets/js/yandex-map.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("ymaps.ready(init);\r\nfunction init(){\r\n    let myMap = new ymaps.Map(\"map\", {\r\n        center: [55.75749303, 37.61569861],\r\n        zoom: 14\r\n    });\r\n\r\n            // Создаём макет содержимого.\r\n            MyIconContentLayout = ymaps.templateLayoutFactory.createClass(\r\n                '<div style=\"color: #FFFFFF; font-weight: bold;\">$[properties.iconContent]</div>'\r\n            ),\r\n    \r\n            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {\r\n                hintContent: 'Встречаемся тут',\r\n                balloonContent: 'Встречаемся тут'\r\n            }, {\r\n                // Опции.\r\n                // Необходимо указать данный тип макета.\r\n                iconLayout: 'default#image',\r\n                // Своё изображение иконки метки.\r\n                iconImageHref: './assets/images/icon/map-point.png',\r\n                // Размеры метки.\r\n                iconImageSize: [50, 60],\r\n                // Смещение левого верхнего угла иконки относительно\r\n                // её \"ножки\" (точки привязки).\r\n                iconImageOffset: [-5, -38]\r\n            }),\r\n    \r\n        myMap.geoObjects\r\n            .add(myPlacemark)\r\n}\n\n//# sourceURL=webpack:///./src/assets/js/yandex-map.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************!*\
-  !*** multi ./src/assets/js/app.js ./src/assets/js/show-more.js ***!
-  \*****************************************************************/
+/*!***********************************************************************************************!*\
+  !*** multi ./src/assets/js/app.js ./src/assets/js/show-more.js ./src/assets/js/yandex-map.js ***!
+  \***********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\app.js */\"./src/assets/js/app.js\");\nmodule.exports = __webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\show-more.js */\"./src/assets/js/show-more.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/show-more.js?");
+eval("__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\app.js */\"./src/assets/js/app.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\show-more.js */\"./src/assets/js/show-more.js\");\nmodule.exports = __webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\yandex-map.js */\"./src/assets/js/yandex-map.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/show-more.js_./src/assets/js/yandex-map.js?");
 
 /***/ })
 

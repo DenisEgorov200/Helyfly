@@ -35,14 +35,36 @@
     }
 
     &--show {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 0;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
         font-size: 17px;
         line-height: 25px;
         color: $blue;
+
+        &__16px {
+            font-size: 16px;
+        }
+        &__14px {
+            font-size: 14px;
+        }
+    }
+
+    &--yellow {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $yellow;
+        border: 2px solid $yellow;
+        border-radius: 3px;
+        padding: 16px 32px;
+        transition: all .3s linear;
+
+        &:hover {
+            color: $white;
+            background-color: $yellow;
+        }
     }
 }

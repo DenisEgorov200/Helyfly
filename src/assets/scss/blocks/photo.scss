@@ -3,9 +3,7 @@
 
     // .photo__container
 
-    &__container {
-        border-bottom: 0.5px solid $gray;
-    }
+    &__container {}
 
     // .photo__title
 
@@ -20,7 +18,9 @@
 
     // .photo__gallery
 
-    &__gallery {}
+    &__gallery {
+        margin: 0 0 45px 0;
+    }
 
     // .photo__all
 
@@ -32,9 +32,16 @@
     // .photo__all
 
     &__more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         p {
             margin: 0 10px;
+        }
+
+        img {
+            max-width: 100%;
         }
     }
 }
