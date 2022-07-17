@@ -3,6 +3,22 @@
     padding: 270px 0;
     background: url('./../images/intro-background.jpg') no-repeat;
     background-size: contain;
+
+    @media (max-width: 1629px) {
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media (max-width: 700px) {
+        padding: 190px 0;
+    }
+
+    @media (max-width: 400px) {
+        padding: 150px 0;
+        background-size: cover;
+        background-position: center;
+    }
+
     // .intro__container
 
     &__container {
@@ -23,6 +39,11 @@
 
         span {
             color: $yellow;
+        }
+
+        @media (max-width: 400px) {
+            max-width: 250px;
+            font-size: 32px;
         }
     }
 
@@ -74,6 +95,14 @@
         p {
             font-weight: 800;
             font-size: 35px;
+
+            @media (max-width: 400px) {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            font-size: 18px;
         }
     }
 
@@ -104,5 +133,9 @@
         font-size: 18px;
         text-align: center;
         color: $white;
+
+        @media (max-width: 400px) {
+            padding: 25px 33px;
+        }
     }
 }

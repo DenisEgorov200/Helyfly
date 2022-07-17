@@ -9,6 +9,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
     }
 
     // .footer__pay
@@ -25,6 +29,11 @@
 
         img {
             max-width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            position: static;
+            margin: 0 0 20px 0;
         }
     }
 

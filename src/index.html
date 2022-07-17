@@ -4,7 +4,7 @@ title: BrainsCloud | Home
 ---
 
 <!-- Intro -->
-<section class="intro">
+<section class="intro"> 
     <div class="intro__container container">
         <h2 class="intro__title">
             Эксклюзивная <span>фотосессия</span> при полете на вертолете
@@ -35,6 +35,7 @@ title: BrainsCloud | Home
                 <h2 class="photoshoot__title">
                     Фотосессия в вертолете
                 </h2>
+                <img src="./assets/images/photoshoot-preview.jpg" alt="preview">
             </div>
             <div class="photoshoot__body">
                 <p class="photoshoot__subtitle">
@@ -156,6 +157,15 @@ title: BrainsCloud | Home
                 <img src="./assets/images/photoshoot-preview.jpg" alt="">
             </div>
         </div>
+        <div class="photo__slider swiper-container">
+            <div class="photo__slider-wrapper swiper-wrapper">
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+            </div>
+        </div>
         <div class="photo__all">
             <button class="photo__more btn btn--show">
                 <img src="./assets/images/icon/arrow.svg" alt="arrow">
@@ -267,26 +277,28 @@ title: BrainsCloud | Home
                 <div class="timetable__icon">
                     <img src="./assets/images/icon/cup.svg" alt="cup">
                 </div>
-                <p class="timetable__review">
-                    Более <span>50</span> отзывов с оценкой
-                </p>
-                <div class="timetable__rating simple-rating">
-                    <div class="simple-rating__items">
-                        <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
-                            name="simple-rating" value="5">
-                        <label for="simple-rating__5" class="simple-rating__label"></label>
-                        <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
-                            value="4">
-                        <label for="simple-rating__4" class="simple-rating__label"></label>
-                        <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
-                            value="3">
-                        <label for="simple-rating__3" class="simple-rating__label"></label>
-                        <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
-                            value="2">
-                        <label for="simple-rating__2" class="simple-rating__label"></label>
-                        <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
-                            value="1">
-                        <label for="simple-rating__1" class="simple-rating__label"></label>
+                <div class="timetable__wrapper">
+                    <p class="timetable__review">
+                        Более <span>50</span> отзывов с оценкой
+                    </p>
+                    <div class="timetable__rating simple-rating">
+                        <div class="simple-rating__items">
+                            <input id="simple-rating__5" type="radio" class="simple-rating__item" checked
+                                name="simple-rating" value="5">
+                            <label for="simple-rating__5" class="simple-rating__label"></label>
+                            <input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="4">
+                            <label for="simple-rating__4" class="simple-rating__label"></label>
+                            <input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="3">
+                            <label for="simple-rating__3" class="simple-rating__label"></label>
+                            <input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="2">
+                            <label for="simple-rating__2" class="simple-rating__label"></label>
+                            <input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
+                                value="1">
+                            <label for="simple-rating__1" class="simple-rating__label"></label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -296,44 +308,44 @@ title: BrainsCloud | Home
 
 <!-- Map -->
 <section class="map">
-    <div id="map" style="width: 100%; height: 509px">
-        <div class="map__card">
-            <div class="map__row">
-                <div class="map__icon">
-                    <img src="./assets/images/icon/1.svg" alt="1">
-                </div>
-                <div class="map__text">
-                    <h4 class="map__title">Где встречаемся?</h4>
-                    <p class="map__subtitle">Москва</p>
-                </div>
+    <div class="map__maps" id="map" style="width: 100%; height: 509px">
+    </div>
+    <div class="map__card">
+        <div class="map__row">
+            <div class="map__icon">
+                <img src="./assets/images/icon/1.svg" alt="1">
             </div>
-            <div class="map__row">
-                <div class="map__icon">
-                    <img src="./assets/images/icon/2.svg" alt="2">
-                </div>
-                <div class="map__text">
-                    <h4 class="map__title">Время съемки?</h4>
-                    <p class="map__subtitle">3 часа</p>
-                </div>
+            <div class="map__text">
+                <h4 class="map__title">Где встречаемся?</h4>
+                <p class="map__subtitle">Москва</p>
             </div>
-            <div class="map__row">
-                <div class="map__icon">
-                    <img src="./assets/images/icon/3.svg" alt="3">
-                </div>
-                <div class="map__text">
-                    <h4 class="map__title">Мест осталось:</>
-                        <p class="map__subtitle">2 места</p>
-                </div>
+        </div>
+        <div class="map__row">
+            <div class="map__icon">
+                <img src="./assets/images/icon/2.svg" alt="2">
             </div>
-            <div class="map__row">
-                <div class="map__icon">
-                    <img src="./assets/images/avatar.jpg" alt="avatar">
-                </div>
-                <div class="map__text">
-                    <h4 class="map__title">Мария Иванова</h4>
-                    <p class="map__profession">Фотограф</p>
-                    <a href="#" class="map__more btn btn--show btn--show__14px">Показать больше информации</a>
-                </div>
+            <div class="map__text">
+                <h4 class="map__title">Время съемки?</h4>
+                <p class="map__subtitle">3 часа</p>
+            </div>
+        </div>
+        <div class="map__row">
+            <div class="map__icon">
+                <img src="./assets/images/icon/3.svg" alt="3">
+            </div>
+            <div class="map__text">
+                <h4 class="map__title">Мест осталось:</>
+                    <p class="map__subtitle">2 места</p>
+            </div>
+        </div>
+        <div class="map__row">
+            <div class="map__icon">
+                <img src="./assets/images/avatar.jpg" alt="avatar">
+            </div>
+            <div class="map__text">
+                <h4 class="map__title">Мария Иванова</h4>
+                <p class="map__profession">Фотограф</p>
+                <a href="#" class="map__more btn btn--show btn--show__14px">Показать больше информации</a>
             </div>
         </div>
     </div>

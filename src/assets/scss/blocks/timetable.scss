@@ -1,6 +1,10 @@
 .timetable {
     padding: 60px 0;
 
+    @media (max-width: 1000px) {
+        padding: 30px 0;
+    }
+
     // .timetable__container
 
     &__container {
@@ -23,6 +27,10 @@
     &__card {
         width: 70%;
         border: 1px solid $gray;
+
+        @media (max-width: 720px) {
+            width: 100%;
+        }
     }
 
     // .timetable__header
@@ -67,6 +75,10 @@
                 fill: $black;
             }
         }
+
+        @media (max-width: 456px) {
+            display: none;
+        }
     }
 
     // .timetable__body
@@ -87,6 +99,10 @@
         &:not(:last-child) {
             border-bottom: 0.5px solid #C4C4C4;;
         }
+
+        @media (max-width: 456px) {
+            flex-direction: column;
+        }
     }
 
     // .timetable__column
@@ -96,6 +112,14 @@
         font-size: 18px;
         line-height: 26px;
         color: $primary;
+
+        @media (max-width: 456px) {
+            width: 100%;
+
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
     }
 
     // .timetable__time
@@ -134,8 +158,26 @@
 
         img {
             max-width: 100%;
+
+            @media (max-width: 700px) {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
+
+    // .timetable__wrapper
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 456px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
 
     // .timetable__review
 
@@ -148,6 +190,13 @@
 
         span {
             font-weight: 600;
+        }
+
+        @media (max-width: 700px) {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            margin: 0;
         }
     }
 
