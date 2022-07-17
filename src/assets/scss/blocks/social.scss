@@ -1,0 +1,53 @@
+.social {
+    padding: 37px 0;
+    // .social__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .social__logo
+
+    &__logo {
+    }
+
+    // .social__network
+
+    &__network {
+        display: flex;
+        align-items: center;
+    }
+
+    // .social__item
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &:not(:last-child) {
+            margin: 0 30px 0 0;
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+            transition: fill .3s linear;
+
+            &:hover {
+                fill: #83888A;
+            }
+        }
+
+        p {
+            font-family: $MainFont;
+            font-size: 15px;
+            line-height: 18px;
+            color: $primary;
+            text-transform: uppercase;
+            margin: 0 6px 0 0;
+        }
+    }
+}

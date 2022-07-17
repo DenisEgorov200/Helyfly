@@ -16,11 +16,17 @@
         margin: 0 0 50px 0;
     }
 
+    // .reviews__content
+
+    &__content {
+        margin: 0 0 47px 0;
+    }
+
     // .reviews__card
 
     &__card {
         display: flex;
-        max-width: 650px;
+        max-width: 625px;
 
         &:not(:last-child) {
             margin: 0 0 40px 0;
@@ -131,4 +137,28 @@
         line-height: 21px;
         color: $secondary;
     }
+
+    // .reviews__all
+
+    &__all {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .reviews__more
+
+    &__more {
+        display: flex;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            margin: 0 10px;
+        }
+    }
+
 }

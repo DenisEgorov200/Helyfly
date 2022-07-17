@@ -402,6 +402,8 @@ body {
     font-size: 17px;
     line-height: 25px;
     color: #5286EC; }
+    .btn--show__17px {
+      font-size: 17px; }
     .btn--show__16px {
       font-size: 16px; }
     .btn--show__14px {
@@ -864,9 +866,11 @@ body {
     line-height: 29px;
     color: #37373F;
     margin: 0 0 50px 0; }
+  .reviews__content {
+    margin: 0 0 47px 0; }
   .reviews__card {
     display: flex;
-    max-width: 650px; }
+    max-width: 625px; }
     .reviews__card:not(:last-child) {
       margin: 0 0 40px 0; }
   .reviews__img {
@@ -922,3 +926,68 @@ body {
     font-size: 14px;
     line-height: 21px;
     color: #B3B3B3; }
+  .reviews__all {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .reviews__more {
+    display: flex;
+    align-items: center; }
+    .reviews__more img {
+      max-width: 100%; }
+    .reviews__more p {
+      margin: 0 10px; }
+
+.social {
+  padding: 37px 0; }
+  .social__container {
+    display: flex;
+    justify-content: space-between; }
+  .social__network {
+    display: flex;
+    align-items: center; }
+  .social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .social__item:not(:last-child) {
+      margin: 0 30px 0 0; }
+    .social__item svg {
+      width: 25px;
+      height: 25px;
+      transition: fill .3s linear; }
+      .social__item svg:hover {
+        fill: #83888A; }
+    .social__item p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      line-height: 18px;
+      color: #37373F;
+      text-transform: uppercase;
+      margin: 0 6px 0 0; }
+
+.footer {
+  padding: 5px 0 20px 0;
+  background: #FAF9F8; }
+  .footer__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer__pay {
+    position: absolute;
+    left: 0; }
+    .footer__pay a:not(:last-child) {
+      margin: 0 20px 0 0; }
+    .footer__pay img {
+      max-width: 100%; }
+  .footer__support {
+    text-align: center; }
+    .footer__support p, .footer__support a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      line-height: 17px;
+      color: #B3B3B3;
+      text-decoration: none; }
+    .footer__support p:not(:last-child) {
+      margin: 0 0 7px 0; }

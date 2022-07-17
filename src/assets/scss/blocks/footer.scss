@@ -1,0 +1,49 @@
+.footer {
+    padding: 5px 0 20px 0;
+    background: $light-gray;
+
+    // .footer__container
+
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .footer__pay
+
+    &__pay {
+        position: absolute;
+        left: 0;
+
+        a {
+            &:not(:last-child) {
+                margin: 0 20px 0 0;
+            }
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .footer__support
+
+    &__support {
+        text-align: center;
+        
+        p, a {
+            font-family: $MainFont;
+            font-size: 14px;
+            line-height: 17px;
+            color: $secondary;
+            text-decoration: none;
+        }
+        p {
+            &:not(:last-child) {
+                margin: 0 0 7px 0;
+            }
+        }
+    }
+}
