@@ -97,6 +97,17 @@ eval("\r\n\n\n//# sourceURL=webpack:///./src/assets/js/app.js?");
 
 /***/ }),
 
+/***/ "./src/assets/js/booking-popup.js":
+/*!****************************************!*\
+  !*** ./src/assets/js/booking-popup.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const btn = document.querySelector('.intro__btn');\r\nconst modalOverlay = document.querySelector('.booking__container');\r\nconst modal = document.querySelector('.booking__modal');\r\nconst btnClose = document.querySelector('.booking__line');\r\n\r\nbtn.addEventListener('click', (e) => {\r\n    let path = e.currentTarget.getAttribute('data-path');\r\n\r\n    modal.classList.remove('booking__modal--visible');\r\n\r\n    document.querySelector(`[data-target='${path}']`).classList.add('booking__modal--visible');\r\n    modalOverlay.classList.add('booking__container--visible');\r\n    document.querySelector('body').classList.add('hidden');\r\n});\r\n\r\nmodalOverlay.addEventListener('click', (e) => {\r\n    if (e.target == modalOverlay) {\r\n        modalOverlay.classList.remove('booking__container--visible');\r\n    \r\n        modal.classList.remove('booking__modal--visible');\r\n\r\n        document.querySelector('body').classList.remove('hidden');\r\n    }\r\n});\r\n\r\nbtnClose.addEventListener('click', (e) => {\r\n    console.log(e.target);\r\n    if (e.target == btnClose) {\r\n        modalOverlay.classList.remove('booking__container--visible');\r\n    \r\n        modal.classList.remove('booking__modal--visible');\r\n\r\n        document.querySelector('body').classList.remove('hidden');\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/assets/js/booking-popup.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/photo-slider.js":
 /*!***************************************!*\
   !*** ./src/assets/js/photo-slider.js ***!
@@ -108,6 +119,17 @@ eval("new Swiper('.photo__slider', {\r\n\r\n    slidesPerView: 1,\r\n\r\n    cen
 
 /***/ }),
 
+/***/ "./src/assets/js/read-more.js":
+/*!************************************!*\
+  !*** ./src/assets/js/read-more.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const readMoreBtns = document.querySelectorAll('[expand-more]');\r\nconst moreText = document.querySelectorAll('.organizer__more-text');\r\nconst dots = document.querySelector('.dots');\r\n\r\nfunction expand() {\r\n    const showContent = document.getElementById(this.dataset.target);\r\n    if (showContent.classList.contains('organizer__content-more--visible')) {\r\n        this.innerHTML = this.dataset.showtext;\r\n        dots.style.display = 'inline'\r\n    } else {\r\n        this.innerHTML = this.dataset.hidetext;\r\n        dots.style.display = 'none'\r\n    }\r\n    showContent.classList.toggle('organizer__content-more--visible');\r\n}\r\n\r\nreadMoreBtns.forEach(expandMore => {\r\n    expandMore.addEventListener('click', expand)\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/read-more.js?");
+
+/***/ }),
+
 /***/ "./src/assets/js/show-more.js":
 /*!************************************!*\
   !*** ./src/assets/js/show-more.js ***!
@@ -115,7 +137,7 @@ eval("new Swiper('.photo__slider', {\r\n\r\n    slidesPerView: 1,\r\n\r\n    cen
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// // const showMore = document.querySelector('.photo__more');\r\n// // const photoLength = document.querySelectorAll('.gallery__item').length;\r\n// // let items = 8;\r\n\r\n// // showMore.addEventListener('click', function() {\r\n// //     items += 4;\r\n// //     const array = Array.from(document.querySelector('.gallery').children);\r\n// //     const visItems = array.slice(0, items);\r\n\r\n// //     visItems.forEach(el => el.classList.add('is-visible'));\r\n\r\n// //     if (visItems.length === photoLength) {\r\n// //         visItems.forEach(el => el.classList.remove('is-visible'));\r\n// //     }\r\n// // });\r\n\r\n// const showMore = document.querySelector('.photo__more');\r\n// const photoLength = document.querySelectorAll('.gallery__item');\r\n// const arrowImg = document.querySelectorAll('.photo__img')\r\n// console.log(arrowImg);\r\n// let items = 8;\r\n\r\n// showMore.addEventListener('click', function() {\r\n//     for (let i = items; i < items + 4; i++) {\r\n//         if (photoLength[i]) {\r\n//             photoLength[i].style.display = 'block';\r\n//         }\r\n//     }\r\n//     items += 4;\r\n//     if (items === photoLength.length) {\r\n//         // event.target.style.display = 'none'\r\n//         showMore.style.display = 'none'\r\n//     }\r\n// });\n\n//# sourceURL=webpack:///./src/assets/js/show-more.js?");
+eval("// // const showMore = document.querySelector('.photo__more');\r\n// // const photoLength = document.querySelectorAll('.gallery__item').length;\r\n// // let items = 8;\r\n\r\n// // showMore.addEventListener('click', function() {\r\n// //     items += 4;\r\n// //     const array = Array.from(document.querySelector('.gallery').children);\r\n// //     const visItems = array.slice(0, items);\r\n\r\n// //     visItems.forEach(el => el.classList.add('is-visible'));\r\n\r\n// //     if (visItems.length === photoLength) {\r\n// //         visItems.forEach(el => el.classList.remove('is-visible'));\r\n// //     }\r\n// // });\r\n\r\nconst showMore = document.querySelector('.photo__more');\r\nconst photoLength = document.querySelectorAll('.gallery__item');\r\nconst arrowImg = document.querySelectorAll('.photo__img')\r\nconsole.log(arrowImg);\r\nlet items = 8;\r\n\r\nshowMore.addEventListener('click', function() {\r\n    for (let i = items; i < items + 4; i++) {\r\n        if (photoLength[i]) {\r\n            photoLength[i].style.display = 'block';\r\n        }\r\n    }\r\n    items += 4;\r\n    if (items === photoLength.length) {\r\n        // event.target.style.display = 'none'\r\n        showMore.style.display = 'none'\r\n    }\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/show-more.js?");
 
 /***/ }),
 
@@ -131,13 +153,13 @@ eval("ymaps.ready(init);\r\nfunction init(){\r\n    let myMap = new ymaps.Map(\"
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************************!*\
-  !*** multi ./src/assets/js/app.js ./src/assets/js/photo-slider.js ./src/assets/js/show-more.js ./src/assets/js/yandex-map.js ***!
-  \*******************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/assets/js/app.js ./src/assets/js/booking-popup.js ./src/assets/js/photo-slider.js ./src/assets/js/read-more.js ./src/assets/js/show-more.js ./src/assets/js/yandex-map.js ***!
+  \*********************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\app.js */\"./src/assets/js/app.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\photo-slider.js */\"./src/assets/js/photo-slider.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\show-more.js */\"./src/assets/js/show-more.js\");\nmodule.exports = __webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\yandex-map.js */\"./src/assets/js/yandex-map.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/photo-slider.js_./src/assets/js/show-more.js_./src/assets/js/yandex-map.js?");
+eval("__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\app.js */\"./src/assets/js/app.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\booking-popup.js */\"./src/assets/js/booking-popup.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\photo-slider.js */\"./src/assets/js/photo-slider.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\read-more.js */\"./src/assets/js/read-more.js\");\n__webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\show-more.js */\"./src/assets/js/show-more.js\");\nmodule.exports = __webpack_require__(/*! C:\\www\\helyfly\\src\\assets\\js\\yandex-map.js */\"./src/assets/js/yandex-map.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/app.js_./src/assets/js/booking-popup.js_./src/assets/js/photo-slider.js_./src/assets/js/read-more.js_./src/assets/js/show-more.js_./src/assets/js/yandex-map.js?");
 
 /***/ })
 

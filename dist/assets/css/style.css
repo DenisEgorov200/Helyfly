@@ -374,6 +374,10 @@ body {
     color: #37373F;
 }
 
+body--hidden {
+    overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -562,6 +566,25 @@ body {
 .btn--yellow:hover {
     color: #fff;
     background-color: #FC9B09;
+}
+
+.btn--orange {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    background: #FC9B09;
+    border: 2px solid #FC9B09;
+    border-radius: 3px;
+    padding: 16px 32px;
+    transition: all .3s linear;
+}
+
+.btn--orange:hover {
+    color: #FC9B09;
+    border: 2px solid #FC9B09;
+    background-color: #fff;
 }
 
 .intro {
@@ -953,6 +976,12 @@ body {
     padding: 30px 0;
 }
 
+@media (max-width: 1000px) {
+    .photo__container {
+        min-width: 0;
+    }
+}
+
 .photo__title {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -962,8 +991,33 @@ body {
     margin: 0 0 37px 0;
 }
 
+@media (max-width: 1000px) {
+    .photo__title {
+        text-align: center;
+    }
+}
+
 .photo__gallery {
     margin: 0 0 45px 0;
+}
+
+.photo__slider {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .photo__slider {
+        display: block;
+        overflow: hidden;
+    }
+}
+
+.photo__slider-slide {
+    text-align: center;
+}
+
+.photo__slider-slide img {
+    max-width: 100%;
 }
 
 .photo__all {
@@ -1041,13 +1095,32 @@ body {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 27px 0 51px 0;
+    padding: 27px 10px 51px 10px;
     border-bottom: 0.5px solid #C7C7C7;
     border-top: 0.5px solid #C7C7C7;
 }
 
+@media (max-width: 1000px) {
+    .organizer__container {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
 .organizer__left {
     width: 50%;
+}
+
+@media (max-width: 1000px) {
+    .organizer__left {
+        width: 100%;
+    }
 }
 
 .organizer__info:not(:last-child) {
@@ -1110,6 +1183,13 @@ body {
     justify-content: center;
 }
 
+@media (max-width: 1000px) {
+    .organizer__right {
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+}
+
 .organizer__card {
     position: relative;
     padding: 30px 0 0 0;
@@ -1151,9 +1231,21 @@ body {
     margin: 0 0 4px 0;
 }
 
+@media (max-width: 1000px) {
+    .organizer__profession {
+        margin: 0;
+    }
+}
+
 .organizer__show {
     max-width: 250px;
     line-height: 21px;
+}
+
+@media (max-width: 1000px) {
+    .organizer__show {
+        font-size: 14px;
+    }
 }
 
 .organizer__heart {
@@ -1177,6 +1269,12 @@ body {
     padding: 60px 0;
 }
 
+@media (max-width: 1000px) {
+    .timetable {
+        padding: 30px 0;
+    }
+}
+
 .timetable__title {
     max-width: 212px;
     font-family: "Montserrat", sans-serif;
@@ -1190,6 +1288,12 @@ body {
 .timetable__card {
     width: 70%;
     border: 1px solid #C7C7C7;
+}
+
+@media (max-width: 720px) {
+    .timetable__card {
+        width: 100%;
+    }
 }
 
 .timetable__header {
@@ -1239,6 +1343,12 @@ body {
     fill: #000;
 }
 
+@media (max-width: 456px) {
+    .timetable__calendar {
+        display: none;
+    }
+}
+
 .timetable__body {
     margin: 0 0 40px 0;
 }
@@ -1258,11 +1368,28 @@ body {
     border-bottom: 0.5px solid #C4C4C4;
 }
 
+@media (max-width: 456px) {
+    .timetable__row {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 .timetable__column {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     line-height: 26px;
     color: #37373F;
+}
+
+@media (max-width: 456px) {
+    .timetable__column {
+        width: 100%;
+    }
+
+    .timetable__column:not(:last-child) {
+        margin: 0 0 20px 0;
+    }
 }
 
 .timetable__price {
@@ -1285,6 +1412,29 @@ body {
     max-width: 100%;
 }
 
+@media (max-width: 700px) {
+    .timetable__icon img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.timetable__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 456px) {
+    .timetable__wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
 .timetable__review {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -1297,8 +1447,35 @@ body {
     font-weight: 600;
 }
 
+@media (max-width: 700px) {
+    .timetable__review {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0;
+    }
+}
+
 .map {
     position: relative;
+}
+
+@media (max-width: 1280px) {
+    .map {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1280px) {
+    .map__maps {
+        margin: 0 0 52px 0;
+    }
 }
 
 .map__card {
@@ -1317,6 +1494,22 @@ body {
     background-color: #fff;
     border: 1px solid #C7C7C7;
     padding: 30px 50px;
+}
+
+@media (max-width: 1280px) {
+    .map__card {
+        position: static;
+    }
+}
+
+@media (max-width: 1000px) {
+    .map__card {
+        width: initial;
+        height: initial;
+        padding: 10px 15px;
+        -ms-flex-pack: initial;
+        justify-content: initial;
+    }
 }
 
 .map__row {
@@ -1388,6 +1581,12 @@ body {
     margin: 0 0 47px 0;
 }
 
+@media (max-width: 600px) {
+    .reviews__content {
+        margin: 0 0 30px 0;
+    }
+}
+
 .reviews__card {
     display: -ms-flexbox;
     display: flex;
@@ -1396,6 +1595,24 @@ body {
 
 .reviews__card:not(:last-child) {
     margin: 0 0 40px 0;
+}
+
+@media (max-width: 600px) {
+    .reviews__card {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews__left {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .reviews__img {
@@ -1421,6 +1638,20 @@ body {
 .reviews__right {
     padding: 0 0 35px 0;
     border-bottom: 0.5px solid #C7C7C7;
+}
+
+@media (max-width: 600px) {
+    .reviews__header {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .reviews__name {
@@ -1452,8 +1683,20 @@ body {
     margin: 0 50px 0 0;
 }
 
+@media (max-width: 600px) {
+    .reviews__grade {
+        margin: 0;
+    }
+}
+
 .reviews__icon {
     margin: 0 5px 0 0;
+}
+
+@media (max-width: 600px) {
+    .reviews__icon {
+        display: none;
+    }
 }
 
 .reviews__text {
@@ -1463,11 +1706,17 @@ body {
     color: #B3B3B3;
 }
 
+@media (max-width: 600px) {
+    .reviews__text {
+        display: none;
+    }
+}
+
 .reviews__body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     line-height: 24px;
-    color: "Montserrat", sans-serif;
+    color: #37373F;
     margin: 0 0 15px 0;
 }
 
@@ -1513,6 +1762,17 @@ body {
     justify-content: space-between;
 }
 
+.social__logo img {
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    .social__logo {
+        width: 84px;
+        height: 15px;
+    }
+}
+
 .social__network {
     display: -ms-flexbox;
     display: flex;
@@ -1531,6 +1791,12 @@ body {
 
 .social__item:not(:last-child) {
     margin: 0 30px 0 0;
+}
+
+@media (max-width: 600px) {
+    .social__item:not(:last-child) {
+        margin: 0 10px 0 0;
+    }
 }
 
 .social__item svg {
@@ -1567,6 +1833,13 @@ body {
     align-items: center;
 }
 
+@media (max-width: 700px) {
+    .footer__container {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
 .footer__pay {
     position: absolute;
     left: 0;
@@ -1578,6 +1851,13 @@ body {
 
 .footer__pay img {
     max-width: 100%;
+}
+
+@media (max-width: 700px) {
+    .footer__pay {
+        position: static;
+        margin: 0 0 20px 0;
+    }
 }
 
 .footer__support {
@@ -1594,4 +1874,272 @@ body {
 
 .footer__support p:not(:last-child) {
     margin: 0 0 7px 0;
+}
+
+.booking__container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+}
+
+.booking__container--visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+    z-index: 3;
+}
+
+.booking__modal {
+    position: relative;
+    width: 615px;
+    height: 887px;
+    background: #fff;
+    border-radius: 6px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 61px 90px;
+    display: none;
+    overflow: auto;
+}
+
+.booking__modal--visible {
+    display: block;
+}
+
+.booking__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #37373F;
+    margin: 0 0 31px 0;
+}
+
+.booking__row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.booking__row:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.booking__label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #37373F;
+    margin: 0 0 10px 0;
+}
+
+.booking__input {
+    padding: 12px 20px;
+    border: 1px solid #C7C7C7;
+    border-radius: 3px;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #37373F;
+}
+
+.booking__input::-webkit-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+
+.booking__input::-moz-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+
+.booking__input:-ms-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+
+.booking__input::-ms-input-placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+
+.booking__input::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #C7C7C7;
+}
+
+.booking__data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 1px solid #C7C7C7;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 0 30px 0;
+}
+
+.booking__data input:nth-child(1) {
+    width: 100%;
+    grid-column: 1 / -1;
+    border: 0;
+    border-bottom: 1px solid #C7C7C7;
+}
+
+.booking__data input:nth-child(2) {
+    width: 100%;
+    border: 0;
+    border-right: 1px solid #C7C7C7;
+    border-radius: 3px 3px 0 3px;
+}
+
+.booking__data input:nth-child(3) {
+    width: 100%;
+    border: 0;
+    border-radius: 0 3px 3px 3px;
+}
+
+.booking__accept {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 0 23px 0;
+}
+
+.booking__accept label {
+    max-width: 350px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #37373F;
+}
+
+.booking__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.booking__checkbox + label {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.booking__checkbox + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.booking__checkbox:checked + label::before {
+    box-shadow: 0px 0px 3px rgba(252, 155, 9, 0.6);
+    border-radius: 2px;
+    border-color: #FC9B09;
+    background-color: #FC9B09;
+    background-image: url("../images/icon/check.svg");
+    background-size: 10px 9px;
+}
+
+.booking__footer {
+    padding: 0 5px;
+}
+
+.booking__btn {
+    width: 100%;
+}
+
+.booking__close {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    width: 20.01px;
+    height: 20.03px;
+    cursor: pointer;
+}
+
+.booking__line {
+    position: relative;
+    width: 20.01px;
+    height: 20.03px;
+}
+
+.booking__line::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: #C7C7C7;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.booking__line::after:hover {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.booking__line::before {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: #C7C7C7;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.booking__line::before:hover {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
 }

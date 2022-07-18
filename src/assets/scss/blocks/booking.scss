@@ -1,0 +1,295 @@
+.booking {
+
+    // .booking__container
+
+    &__container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 0 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+            transition: all .3s ease-in-out;
+            z-index: 3;
+        }
+    }
+
+    // .booking__modal
+
+    &__modal {
+        position: relative;
+        width: 615px;
+        height: 887px;
+        background: $white;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        padding: 61px 90px;
+        display: none;
+        overflow: auto;
+
+        &--visible {
+            display: block;
+        }
+
+        @media (max-width: 600px) {
+            padding: 60px 30px;
+        }
+
+        @media (max-height: 721px) {
+            padding: 100px 30px;
+        }
+
+        @media (max-height: 668px) {
+            padding: 130px 30px;
+        }
+
+        @media (max-height: 601px) {
+            padding: 200px 30px;
+        }
+    }
+
+    // .booking__title
+
+    &__title {
+        font-family: $MainFont;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 33px;
+        text-align: center;
+        color: $primary;
+        margin: 0 0 31px 0;
+    }
+
+    // .booking__content
+
+    &__content {
+    }
+
+    // .booking__row
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    // .booking__label
+
+    &__label {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: $primary;
+        margin: 0 0 10px 0;
+    }
+
+    // .booking__input
+
+    &__input {
+        padding: 12px 20px;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        outline: none;
+        font-family: $MainFont;
+        font-size: 16px;
+        line-height: 20px;
+        color: $primary;
+
+        &::placeholder {
+            font-family: $MainFont;
+            font-size: 16px;
+            line-height: 20px;
+            color: #C7C7C7;
+        }
+    }
+
+    // .booking__data
+
+    &__data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        overflow: hidden;
+        margin: 0 0 30px 0;
+
+        & input:nth-child(1) {
+            width: 100%;
+            grid-column: 1 / -1;
+            border: 0;
+            border-bottom: 1px solid $gray;    
+        }
+        & input:nth-child(2) {
+            width: 100%;
+            border: 0;
+            border-right: 1px solid $gray;
+            border-radius: 3px 3px 0 3px;
+
+            @media (max-width: 600px) {
+                border-right: 0;
+                border-bottom: 1px solid $gray;
+            }
+        }
+        & input:nth-child(3) {
+            width: 100%;
+            border: 0;
+            border-radius: 0 3px 3px 3px;
+        }
+
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    // .booking__accept
+
+    &__accept {
+        display: flex;
+        align-items: center;
+        margin: 0 0 23px 0;
+
+        label {
+            max-width: 350px;
+            font-family: $MainFont;
+            font-size: 16px;
+            line-height: 20px;
+            color: $primary;
+        }
+    }
+
+    // .booking__checkbox
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        & + label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        & + label::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid #adb5bd;
+            border-radius: 0.25em;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+        &:checked + label::before {
+            box-shadow: 0px 0px 3px rgba(252, 155, 9, 0.6);
+            border-radius: 2px;
+            border-color: $yellow;
+            background-color: $yellow;
+            background-image: url("../images/icon/check.svg");
+            background-size: 10px 9px;
+        }
+    }
+
+    // .booking__footer
+
+    &__footer {
+        padding: 0 5px;
+    }
+
+    // .booking__btn
+
+    &__btn {
+        width: 100%;
+    }
+
+    // .booking__close
+
+    &__close {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        width: 20.01px;
+        height: 20.03px;
+        cursor: pointer;
+
+        @media (max-height: 801px) {
+            top: 50px;
+        }
+
+        @media (max-height: 721px) {
+            top: 100px;
+        }
+
+        @media (max-height: 668px) {
+            top: 120px;
+            right: 30px;
+        }
+
+        @media (max-height: 601px) {
+            top: 170px;
+        }
+    }
+
+    // .booking__line
+
+    &__line {
+        position: relative;
+        width: 20.01px;
+        height: 20.03px;
+        
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: $gray;
+            transform: rotate(135deg);
+
+            &:hover {
+                transform: rotate(45deg);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: $gray;
+            transform: rotate(45deg);
+
+            &:hover {
+                transform: rotate(135deg);
+            }
+        }
+    }
+}

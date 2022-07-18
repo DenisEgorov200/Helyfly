@@ -4,7 +4,7 @@ title: BrainsCloud | Home
 ---
 
 <!-- Intro -->
-<section class="intro"> 
+<section class="intro">
     <div class="intro__container container">
         <h2 class="intro__title">
             Эксклюзивная <span>фотосессия</span> при полете на вертолете
@@ -22,7 +22,7 @@ title: BrainsCloud | Home
             </div>
         </div>
         <div class="intro__footer">
-            <a class="intro__btn btn btn--white">Забронировать место</a>
+            <a class="intro__btn btn btn--white" data-path="booking">Забронировать место</a>
         </div>
     </div>
 </section>
@@ -159,11 +159,16 @@ title: BrainsCloud | Home
         </div>
         <div class="photo__slider swiper-container">
             <div class="photo__slider-wrapper swiper-wrapper">
-                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
-                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
-                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
-                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
-                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt=""></div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
+                <div class="photo__slider-slide swiper-slide"><img src="./assets/images/photoshoot-preview.jpg" alt="">
+                </div>
             </div>
         </div>
         <div class="photo__all">
@@ -193,12 +198,16 @@ title: BrainsCloud | Home
                         Сначала мы (я и моя команда) изучаем интересы клиентов, а затем придумываем подходящее решение,
                         которое соответствует бюджету
                         и планам клиента. Мы никогда не зависим от субпоставщиков
-                        и не свяжемся…
-                    </p>
+                        и не свяжемся <span class="dots">...</span>
+                        <span class="organizer__content-more" id="readMore1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia aliquam repellat
+                            voluptatum eveniet. Reprehenderit, optio, nesciunt recusandae rerum nihil sapiente dolores
+                            dolore et aliquam ipsa voluptatem accusantium laudantium neque.
+                        </span>
+                    </p>           
                 </div>
                 <div class="organizer__footer">
-                    <button class="organizer__more btn btn--show btn--show__16px">
-                        <p>Читать еще</p>
+                    <button class="organizer__more btn btn--show btn--show__16px" expand-more data-hidetext="Читать меньше" data-showtext="Читать ещё" data-target="readMore1">
+                        <p class="organizer__more-text">Читать еще</p>
                         <img src="./assets/images/icon/arrow.svg" alt="arrow">
                     </button>
                 </div>
@@ -207,13 +216,21 @@ title: BrainsCloud | Home
                 <h3 class="organizer__title">
                     Что я предоставлю:
                 </h3>
-                <p class="organizer__content">Встречу вас на машине после длительного перелёта.
+                <div class="organizer__content">
+                    <p>
+                        Встречу вас на машине после длительного перелёта.
                     Качественный подбор места и локации для вашей съемки. При необходимости всегда возможно прерваться
-                    на обед/ужин. Более <span>50</span> фотографий на выходе с обработкой и замечательные впечатления о
-                    Дубае !</p>
+                    на обед/ужин. Более <b>50</b> фотографий на выходе с обработкой и замечательные впечатления о
+                    Дубае !
+                    <span class="organizer__content-more" id="readMore2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta mollitia aliquam repellat
+                        voluptatum eveniet. Reprehenderit, optio, nesciunt recusandae rerum nihil sapiente dolores
+                        dolore et aliquam ipsa voluptatem accusantium laudantium neque.
+                    </span>
+                    </p>
+                </div>
                 <div class="organizer__footer">
-                    <button class="organizer__more btn btn--show btn--show__16px">
-                        <p>Читать еще</p>
+                    <button class="organizer__more btn btn--show btn--show__16px" expand-more data-hidetext="Читать Меньше" data-showtext="Читать еще" data-target="readMore2">
+                        <p class="organizer__more-text">Читать еще</p>
                         <img src="./assets/images/icon/arrow.svg" alt="arrow">
                     </button>
                 </div>
@@ -393,7 +410,8 @@ title: BrainsCloud | Home
                         </div>
                     </div>
                     <div class="reviews__body">
-                        <p>Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло просто
+                        <p>Хотим выразить огромную благодарность вашей компании! Получили море ощущений, все прошло
+                            просто
                             замечательно. Фотки получились великолепные, отдельное спасибо фотографу!</p>
                     </div>
                     <div class="reviews__footer">
@@ -483,10 +501,12 @@ title: BrainsCloud | Home
                         </div>
                     </div>
                     <div class="reviews__body">
-                        <p>Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными и
+                        <p>Круто-круто-круто!!! Отмечали мой ДэРэ. Отлично провели время!!! Кстати закуски были вкусными
+                            и
                             сытными))Мы
                             с собой ничего не брали. Сами много фоткались,поэтому воспоминания обалденные!!!)) А еще нам
-                            всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить))) Но
+                            всем напечатали по сертификату воздухоплавателя, правда некоторые ленятся за ним съездить)))
+                            Но
                             все равно приятно. Короче, Презентстар – проверено. Оценка: пять!</p>
                     </div>
                     <div class="reviews__footer">

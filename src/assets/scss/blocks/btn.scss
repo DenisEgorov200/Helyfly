@@ -70,4 +70,23 @@
             background-color: $yellow;
         }
     }
+
+    &--orange {
+        font-family: $MainFont;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $white;
+        background: $yellow;
+        border: 2px solid $yellow;
+        border-radius: 3px;
+        padding: 16px 32px;
+        transition: all .3s linear;
+   
+        &:hover {
+            color: $yellow;
+            border: 2px solid $yellow;
+            background-color: $white;
+        }
+    }
 }

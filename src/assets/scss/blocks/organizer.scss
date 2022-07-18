@@ -56,13 +56,25 @@
         color: $primary;
         margin: 0 0 5px 0;
 
-        span {
+        b {
             font-weight: 500;
         }
 
         p {
-            &:not(:first-child) {
-                margin: 20px 0 0 0;
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+            
+            .dots {
+                display: inline;
+            }
+        }
+
+        &-more {
+            display: none;
+
+            &--visible {
+                display: block;
             }
         }
     }

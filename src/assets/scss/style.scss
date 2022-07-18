@@ -21,6 +21,9 @@ body {
     box-sizing: border-box;
 }
 
+.hidden {
+    overflow: hidden;
+}
 
 /* Blocks */
 @import "blocks/header";
@@ -34,4 +37,5 @@ body {
 @import "blocks/map";
 @import "blocks/reviews";
 @import "blocks/social";
-@import "blocks/footer"
+@import "blocks/footer";
+@import "blocks/booking";
