@@ -374,14 +374,14 @@ body {
     color: #37373F;
 }
 
-body--hidden {
-    overflow: hidden;
-}
-
 *,
 *:before,
 *:after {
     box-sizing: border-box;
+}
+
+.hidden {
+    overflow: hidden;
 }
 
 /* Blocks */
@@ -1145,12 +1145,24 @@ body--hidden {
     margin: 0 0 5px 0;
 }
 
-.organizer__content span {
+.organizer__content b {
     font-weight: 500;
 }
 
-.organizer__content p:not(:first-child) {
-    margin: 20px 0 0 0;
+.organizer__content p:not(:last-child) {
+    margin: 0 0 20px 0;
+}
+
+.organizer__content p .dots {
+    display: inline;
+}
+
+.organizer__content-more {
+    display: none;
+}
+
+.organizer__content-more--visible {
+    display: block;
 }
 
 .organizer__footer {
@@ -1891,6 +1903,7 @@ body--hidden {
     align-items: center;
     height: 100vh;
     width: 100%;
+    padding: 0 15px;
     opacity: 0;
     visibility: hidden;
     transition: all .3s ease-in-out;
@@ -1920,6 +1933,30 @@ body--hidden {
 
 .booking__modal--visible {
     display: block;
+}
+
+@media (max-width: 600px) {
+    .booking__modal {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-height: 721px) {
+    .booking__modal {
+        padding: 100px 30px;
+    }
+}
+
+@media (max-height: 668px) {
+    .booking__modal {
+        padding: 130px 30px;
+    }
+}
+
+@media (max-height: 601px) {
+    .booking__modal {
+        padding: 200px 30px;
+    }
 }
 
 .booking__title {
@@ -2022,10 +2059,26 @@ body--hidden {
     border-radius: 3px 3px 0 3px;
 }
 
+@media (max-width: 600px) {
+    .booking__data input:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid #C7C7C7;
+    }
+}
+
 .booking__data input:nth-child(3) {
     width: 100%;
     border: 0;
     border-radius: 0 3px 3px 3px;
+}
+
+@media (max-width: 600px) {
+    .booking__data {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }
 
 .booking__accept {
@@ -2102,6 +2155,31 @@ body--hidden {
     width: 20.01px;
     height: 20.03px;
     cursor: pointer;
+}
+
+@media (max-height: 801px) {
+    .booking__close {
+        top: 50px;
+    }
+}
+
+@media (max-height: 721px) {
+    .booking__close {
+        top: 100px;
+    }
+}
+
+@media (max-height: 668px) {
+    .booking__close {
+        top: 120px;
+        right: 30px;
+    }
+}
+
+@media (max-height: 601px) {
+    .booking__close {
+        top: 170px;
+    }
 }
 
 .booking__line {

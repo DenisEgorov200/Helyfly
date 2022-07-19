@@ -17,11 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<29a7223d-85c7-40b4-8682-1e3ab792be03>&lang=ru_RU"
         type="text/javascript">
     </script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <title>HELYFLY</title></head>
 <body>
@@ -90,7 +92,7 @@
     <header class="header">
         <div class="header__container container">
             <a href="index.html" class="header__logo">
-                <img src="../assets/images/icon/logo.png" alt="HELYFLY">
+                <img src="./assets/images/icon/logo.png" alt="HELYFLY">
             </a>
             <div class="header__contact">
                 <span class="header__telephone">Телефон:</span>
@@ -100,7 +102,7 @@
                 <p>Москва</p>
             </div>
             <div class="header__icon">
-                <img src="../assets/images/icon/avatar.svg" alt="avatar">
+                <img src="./assets/images/icon/avatar.svg" alt="avatar">
             </div>
         </div>
     </header>
@@ -131,7 +133,7 @@
     </section>
     
     <!-- Photoshoot -->
-    <section class="photoshoot">
+    <section class="photoshoot" data-aos="fade-up">
         <div class="photoshoot__container container">
             <div class="photoshoot__left">
                 <div class="photoshoot__header">
@@ -209,7 +211,7 @@
     <!-- Photo -->
     <section class="photo">
         <div class="photo__container container">
-            <h3 class="photo__title">Фотографии пакета:</h3>
+            <h3 class="photo__title" data-aos="fade-down">Фотографии пакета:</h3>
             <div class="photo__gallery gallery">
                 <div class="gallery__item">
                     <img src="./assets/images/photoshoot-preview.jpg" alt="">
@@ -285,7 +287,7 @@
     </section>
     
     <!-- Organizer -->
-    <section class="organizer">
+    <section class="organizer" data-aos="fade-down">
         <div class="organizer__container container">
             <div class="organizer__left">
                 <div class="organizer__info">
@@ -358,7 +360,7 @@
     </section>
     
     <!-- Timetable -->
-    <section class="timetable">
+    <section class="timetable" data-aos="fade-down">
         <div class="timetable__container container">
             <h3 class="timetable__title">Доступная съемка в ближайшее время:
             </h3>
@@ -472,7 +474,7 @@
     </section>
     
     <!-- Reviews -->
-    <section class="reviews">
+    <section class="reviews" data-aos="fade-right">
         <div class="reviews__container container">
             <h4 class="reviews__title">Отзывы:</h4>
             <div class="reviews__content">
@@ -732,6 +734,5 @@
 
     <!-- JS -->
     <script src="assets/js/app.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
